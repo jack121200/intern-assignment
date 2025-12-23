@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JP Infra - NRI Corner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nri-corner">
+    <!-- Navigation Header -->
+    <header class="header">
+      <div class="header-content">
+        <img class="logo" src="img/jp-infra-logo-1-8.png" alt="JP Infra Logo">
+        
+        <nav class="nav-menu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#why-choose" class="nav-link">Why Choose Us</a>
+          <a href="#contact-form" class="nav-link contact-btn">Contact Us</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search-btn" aria-label="Search" onclick="toggleSearch()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="toggleSideMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input" id="searchInput">
+        <button class="search-close" onclick="toggleSearch()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+      <div class="side-menu-header">
+        <img src="img/jp-infra-logo-1-8.png" alt="JP Infra Logo" class="side-menu-logo">
+        <button class="side-menu-close" onclick="toggleSideMenu()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="side-menu-nav">
+        <a href="#home" class="side-menu-link" onclick="toggleSideMenu()">Home</a>
+        <a href="#projects" class="side-menu-link" onclick="toggleSideMenu()">Projects</a>
+        <a href="#about" class="side-menu-link" onclick="toggleSideMenu()">About Us</a>
+        <a href="#why-choose" class="side-menu-link" onclick="toggleSideMenu()">Why Choose Us</a>
+        <a href="#contact-form" class="side-menu-link" onclick="toggleSideMenu()">Contact Us</a>
+      </nav>
+    </div>
+    <div class="side-menu-overlay" id="sideMenuOverlay" onclick="toggleSideMenu()"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-wrapper">
+        <img class="hero-bg" src="img/first_building.jpg" alt="Hero Background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Atria: Your Skyward Escape in Mira Road</h1>
+        <p class="hero-subtitle">Discover premium residences designed to match global standards and deliver lasting value-crafted by JP Infra.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToSection('contact-form')">Book A Site Visit</button>
+          <button class="btn btn-secondary" onclick="downloadBrochure()">
+            Download Brochure
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.979 19.804 4.587 19.412C4.195 19.02 3.99934 18.5493 4 18V15H6V18H18V15H20V18C20 18.55 19.804 19.021 19.412 19.413C19.02 19.805 18.5493 20.0007 18 20H6Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section - Image Left Aligned -->
+    <section class="about-section" id="about">
+  <div class="about-grid">
+
+    <!-- IMAGE : FULL LEFT -->
+    <div class="about-image left-aligned">
+      <img src="img/mumbai's_skyline.png" alt="JP Infra Building">
+    </div>
+
+    <!-- CONTENT : CONTAINED -->
+    <div class="about-content">
+      <h2 class="section-title">
+        Shaping Mumbai's Skyline<br>
+        <span class="highlight">Since 2006</span>
+      </h2>
+
+      <h3 class="subsection-title">
+        An Unmatched Opportunity for Global Investors
+      </h3>
+
+      <p class="about-text">
+        For our Non-Resident Indian (NRI) clientele, investing with JP Infra presents a golden opportunity to own a piece of one of the world's most vibrant and fastest-growing cities.
+      </p>
+
+      <p class="about-text">
+        Every project we undertake reflects a meticulous vision: to harmonize serenity, cutting-edge innovation, and an unwavering commitment to unmatched quality.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Projects Section - Updated Cards -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <h2 class="section-title center">
+          Explore Our <span class="highlight-italic">Landmark Developments</span>
+        </h2>
+        <p class="section-subtitle">Our portfolio redefines urban living with residences and communities designed for comfort, convenience, and long-term value.</p>
+        
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="img/jp_parkway.png" alt="JP Parkway">
+            <div class="project-info">
+              <h3>JP Parkway</h3>
+              <p>Near Andheri East</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="img/jp_decks.png" alt="JP Decks">
+            <div class="project-info">
+              <h3>JP Decks</h3>
+              <p>Goregaon</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="img/The_palace.png" alt="The Palace">
+            <div class="project-info">
+              <h3>The Palace</h3>
+              <p>Mira Road</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="center">
+          <button class="btn btn-primary" onclick="alert('View all projects')">View All Projects</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section - Image Right Aligned -->
+    <section class="why-choose-section" id="why-choose">
+      <div class="container-wide">
+        <div class="why-choose-grid">
+          <div class="why-choose-content">
+            <h2 class="section-title">
+              Why Choose JP Infra as<br>
+              <span class="highlight">Your Investment Partner</span>
+            </h2>
+            <p class="section-subtitle left-align">JP Infra means trust, quality, and growth with transparent, customer-first service.</p>
+
+            <div class="features-list">
+              <div class="feature-item-vertical">
+                <div class="feature-indicator"></div>
+                <div class="feature-content">
+                  <div class="feature-icon-small">📍</div>
+                  <div>
+                    <h3>Prime Locations</h3>
+                    <p>Projects in Mumbai's most promising growth corridors.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="feature-item-vertical">
+                <div class="feature-indicator"></div>
+                <div class="feature-content">
+                  <div class="feature-icon-small">✓</div>
+                  <div>
+                    <h3>Quality & Trust</h3>
+                    <p>Landmark projects delivered with excellence and transparency.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="feature-item-vertical">
+                <div class="feature-indicator"></div>
+                <div class="feature-content">
+                  <div class="feature-icon-small">📈</div>
+                  <div>
+                    <h3>Appreciation & ROI</h3>
+                    <p>Properties designed to deliver strong long-term returns.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="feature-item-vertical">
+                <div class="feature-indicator"></div>
+                <div class="feature-content">
+                  <div class="feature-icon-small">📋</div>
+                  <div>
+                    <h3>Seamless Process</h3>
+                    <p>Hassle-free documentation and dedicated NRI assistance.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="feature-item-vertical">
+                <div class="feature-indicator"></div>
+                <div class="feature-content">
+                  <div class="feature-icon-small">🏆</div>
+                  <div>
+                    <h3>World-Class Living</h3>
+                    <p>Premium amenities and lifestyle features to match global standards.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-choose-image right-aligned" ">
+  <img src="img/why_choose.jpg" alt="JP Infra Property" >
+</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Start Your Investment Journey - Hero Style -->
+    <section class="investment-journey-section" id="contact-form">
+      <div class="investment-bg-wrapper">
+        <img class="investment-bg" src="img/investment_journey.jpg" alt="Investment Journey Background">
+        <div class="investment-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="investment-content">
+          <h2 class="section-title center">
+            Start Your <span class="highlight-italic">Investment Journey</span>
+          </h2>
+          <p class="section-subtitle center">Fill in your details and let our NRI assistance team guide you through every step-from choosing the right project to completing documentation with ease.</p>
+
+          <div class="form-card">
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input type="text" placeholder="Eg. James Roy" required>
+                </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" placeholder="+91" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" placeholder="Eg. james@gmail.com" required>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Investors Section -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <h2 class="section-title center">
+          Trusted by <span class="highlight">Global Investors</span>
+        </h2>
+        <p class="section-subtitle center">Our customers across the globe have trusted JP Infra to deliver not just homes, but lasting value. Hear from NRIs who found their dream property with us.</p>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <img src="img/ramesh.png" alt="Ramesh Iyer" class="testimonial-avatar">
+            <h4>Ramesh Iyer</h4>
+            <p>Shifting to JP Infra has been one of the best decisions for my family. The flats are spacious, the society is vibrant, and my kids love the play areas. Plus, the location makes my office commute so much easier.</p>
+          </div>
+          <div class="testimonial-card">
+            <img src="img/arjun.png" alt="Arjun Mehta" class="testimonial-avatar">
+            <h4>Arjun Mehta</h4>
+            <p>For me, it wasn't just about buying a flat- it was about investing in a lifestyle. JP Infra projects deliver on both comfort and connectivity. I feel confident that the value of my property will only grow with time.</p>
+          </div>
+          <div class="testimonial-card">
+            <img src="img/priya.png" alt="Priya Mathew" class="testimonial-avatar">
+            <h4>Priya Mathew</h4>
+            <p>What I liked most was the transparency in the whole process. From the first visit to the handover, everything was smooth. The amenities are thoughtfully planned, and the greenery around the campus really gives a peaceful vibe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ + Calculator Combined Section -->
+    <section class="combined-section">
+      <div class="combined-bg-wrapper">
+        <img class="combined-bg" src="img/calci_background.jpg" alt="Calculator Background">
+        <div class="combined-overlay"></div>
+      </div>
+      <div class="container-wide">
+        <div class="combined-grid">
+          <!-- FAQ Column -->
+          <div class="faq-column">
+            <div class="faq-card">
+              <h2 class="faq-title">FAQ</h2>
+              <div class="faq-list">
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                  <div class="faq-question">
+                    <span>Q: What documents are required to book a flat?</span>
+                    <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>You'll need identity proof (Passport/Aadhar), address proof, PAN card, and passport-size photographs. For NRIs, additional documents like overseas address proof and passport copy are required.</p>
+                  </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                  <div class="faq-question">
+                    <span>Q: Can I book a flat online?</span>
+                    <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Yes, we offer a seamless online booking process. You can schedule a virtual site visit, review documents, and complete the booking formalities remotely.</p>
+                  </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                  <div class="faq-question">
+                    <span>Q: Is the property RERA registered?</span>
+                    <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Yes, all our projects are RERA registered and comply with all regulatory requirements.</p>
+                  </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                  <div class="faq-question">
+                    <span>Q: What is the booking amount and is it refundable?</span>
+                    <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>The booking amount varies by project. It is refundable as per RERA guidelines if the project doesn't meet specified timelines.</p>
+                  </div>
+                </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                  <div class="faq-question">
+                    <span>Q: Will you help with documentation and registration?</span>
+                    <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Absolutely! Our dedicated team assists with all documentation, registration, and legal formalities to ensure a smooth process.</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- Calculator Column -->
+          <div class="calculator-column">
+            <div class="calculator-card">
+              <h2 class="calculator-title">EMI Calculator</h2>
+              
+              <div class="calculator-field">
+                <div class="field-header">
+                  <label>Loan Amount (in INR)</label>
+                  <span class="field-value" id="loanAmountValue">₹25,00,000</span>
+                </div>
+                <input type="range" id="loanAmount" min="500000" max="50000000" value="2500000" step="100000" class="slider">
+              </div>
+
+              <div class="calculator-field">
+                <div class="field-header">
+                  <label>Interest Rate</label>
+                  <span class="field-value" id="interestRateValue">10%</span>
+                </div>
+                <input type="range" id="interestRate" min="5" max="20" value="10" step="0.1" class="slider">
+              </div>
+
+              <div class="calculator-field">
+                <div class="field-header">
+                  <label>Tenure (In years)</label>
+                  <span class="field-value" id="tenureValue">10 Years</span>
+                </div>
+                <input type="range" id="tenure" min="1" max="30" value="10" step="1" class="slider">
+              </div>
+
+              <div class="emi-result">
+                <p>Your Estimated Monthly EMI</p>
+                <h3 id="emiValue">₹33,000</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <img src="img/jp-infra-logo-1-8.png" alt="JP Infra Logo" class="footer-logo">
+          </div>
+          
+          <div class="footer-column">
+            <h3>Contact Details</h3>
+            <p><strong>Located in:</strong> Viraj Towers</p>
+            <p><strong>Address:</strong> 4th Floor, Viraj Towers, Western Urban Rd, near WEH Metro Station, Gundavali, Andheri East, Mumbai, Maharashtra 400093</p>
+            <p><strong>Phone:</strong> 022 5006 1369</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Ongoing Projects</h3>
+            <ul>
+              <li>North Imperial Greens</li>
+              <li>Codename Starlife</li>
+              <li>The Palace</li>
+              <li>JP Parkway</li>
+              <li>North Barcelona</li>
+              <li>North West-End</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Delivered Projects</h3>
+            <ul>
+              <li>North Aviva</li>
+              <li>North Imperia</li>
+              <li>JP Eminence</li>
+              <li>North Euphoria</li>
+              <li>North Alexa</li>
+              <li>Unity Towers</li>
+              <li>JP Decks</li>
+              <li>Chalet Amar</li>
+              <li>North Celeste</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>NRI Corner</h3>
+            <ul>
+              <li>NRI Corner</li>
+              <li>NRI opportunities</li>
+              <li>NRI Frequently Asked Questions</li>
+            </ul>
+            
+            <h3 style="margin-top: 2rem;">Work With Us</h3>
+            <ul>
+              <li>Career</li>
+              <li>Contact Us</li>
+            </ul>
+
+            <h3 style="margin-top: 2rem;">ISO Certification</h3>
+            <ul>
+              <li>ISO 9001 : 2015</li>
+              <li>ISO 14001 : 2015</li>
+              <li>ISO 45001 : 2018</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>Overview</li>
+              <li>Pushing Boundaries</li>
+              <li>Contact Us</li>
+              <li>North</li>
+              <li>Media</li>
+              <li>Blogs</li>
+              <li>Investor Relations</li>
+              <li>Redefining Real Estate</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Privacy Policy | Terms & Conditions | Refund & Cancellation Policy</p>
+          <p>Copyright by JP INFRA. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
